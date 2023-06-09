@@ -2,10 +2,12 @@ import * as React from 'react';
 import {useState}  from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Write = ()=> {
-
-     
+    const state = useLocation().state;
+    const [value, setValue] = useState(state?.title || "");
+    const [title, setTitle] = useState(state?.desc || "");
 
     return (
 
@@ -13,7 +15,7 @@ const Write = ()=> {
         <div className="content" > 
         <input type="text"  placeholder="Title"/> 
         <div className="editorContainer">
-        <ReactQuill theme="snow" value={value} onChange={setValue} /> 
+        <ReactQuill theme="snow" readOnly={true}  value={value} onChange={setValue} /> 
 
         
         </div>
