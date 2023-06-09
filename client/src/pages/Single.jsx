@@ -2,7 +2,7 @@ import React from "react";
 import Edit from '../img/edit.png'
 import Delete from '../img/delete.png'
 import { Link } from "react-router-dom";
-
+import Menu from "../components/Menu";
 const Single = () => {
     return (
         <div className="single">
@@ -19,7 +19,7 @@ const Single = () => {
                             <img src={Edit} alt="" />
                         </Link>
 
-                        <img src={Delete} alt=""> </img>
+                        <img src={Delete} alt=""/> 
                     </div>
                 </div>
 <h1>  Lorem ipsum   </h1>
@@ -27,11 +27,11 @@ const Single = () => {
                 Lorem ipsum    Lorem ipsum    Lorem ipsum    Lorem ipsum    Lorem ipsum  
                 </p>
             </div>
-            <div className="menu"> m </div>
+          <Menu/> 
 
         </div>
 
-    )
-}
+    );
+};
 
 export default Single;
