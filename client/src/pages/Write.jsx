@@ -58,7 +58,7 @@ const Write = ()=> {
             </div>
         </div>
         </div>
-    )
-}
+    );
+};
 
 export default Write
