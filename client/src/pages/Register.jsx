@@ -1,7 +1,26 @@
+// import express from "express"
+
+
+// const app=express()
+
+// app.get("/", (req,res) => {
+//     res.json("hello thi is th ebackend")
+// })
+
+// app.get("/posts", (req, res) => {
+//     const q= "SELECT * FROM posts"
+// })
+// z
+// app.listen(3000, ()=>{
+//     console.log("connected to backedn")
+// })
+
 import React from "react";
 import {useState} from "react";
 import {Link} from 'react-router-dom'
 import axios from "axios"
+ 
+ 
 
 const Register = ()=> {
     const[inputs,setInputs]  = useState({
