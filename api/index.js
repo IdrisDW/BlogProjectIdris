@@ -22,8 +22,12 @@ import userRoutes from "./routes/users.js";
 import postRoutes from "./routes/posts.js";
 import cookieParser from "cookie-parser";
 import multer from "multer";
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
 
 const app = express();
+var cors = require('cors')
+app.use(cors()) 
 
 app.use(express.json());
 app.use(cookieParser());
