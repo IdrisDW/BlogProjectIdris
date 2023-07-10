@@ -68,9 +68,11 @@ const Single = () => {
           )}
         </div>
         <h1>{post.title}</h1>
-        <p>
-        {post.desc}
-        </p>      </div>
+        <p
+          dangerouslySetInnerHTML={{
+            __html: DOMPurify.sanitize(post.desc),
+          }}
+        ></p>      </div>
       <Menu cat={post.cat}/>
     </div>
   );

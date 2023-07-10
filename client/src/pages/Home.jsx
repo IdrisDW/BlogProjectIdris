@@ -20,7 +20,6 @@ const Home = () => {
     };
     fetchData();
   }, [cat]);
- 
   // const posts = [
   //   {
   //     id: 1,
@@ -47,7 +46,13 @@ const Home = () => {
   //     img: "https://images.pexels.com/photos/6157049/pexels-photo-6157049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   //   },
   // ];
- 
+
+  const getText = (html) =>{
+    const doc = new DOMParser().parseFromString(html, "text/html")
+    return doc.body.textContent
+  }
+
+
   return (
     <div className="home">
       <div className="posts">
@@ -60,7 +65,7 @@ const Home = () => {
               <Link className="link" to={`/post/${post.id}`}>
                 <h1>{post.title}</h1>
               </Link>
-               
+              <p>{getText(post.desc)}</p>
               <button>Read More</button>
             </div>
           </div>
